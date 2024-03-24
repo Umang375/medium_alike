@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { userRouter } from "./routes/user";
 import { blogRouter } from "./routes/blog";
+import { cors } from "hono/cors";
 
 // type Variables = {
 //   message : string
@@ -16,9 +17,9 @@ const app = new Hono<{
   };
 }>();
 
+app.use("/*", cors());
 app.route("/api/v1/user", userRouter);
-app.route("/api/v1/blog" , blogRouter);
-
+app.route("/api/v1/blog", blogRouter);
 
 //Middleware in HONO
 // app.use("/api/v1/blog/*", async(c,next) => {
