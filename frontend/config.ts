@@ -1,1 +1,1 @@
-export const BACKEND_URL = 'https://backend.ujain7315.workers.dev'
+export const BACKEND_URL = 'YOUR_DEPLOYED_BACKEND_CLOUDFLARE'
